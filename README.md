@@ -1,6 +1,6 @@
 # Instagram Reel Downloader
 
-A simple web application to download Instagram Reels.
+A simple Flask web application to download Instagram Reels.
 
 ## Online Version
 
