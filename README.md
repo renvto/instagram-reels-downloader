@@ -6,7 +6,7 @@ A simple Flask web application to download Instagram Reels.
 
 If you don't want to host it yourself, use the online version at https://instagram.renato.ink/ - 100% free and without ads.
 
-**Note:** The online version may experience downtime due to rate limiting from Instagram's servers. If you see an error message containing "Please wait a few minutes before you try again.", this is caused by rate limiting. Please try again later or consider running it locally.
+**Note:** The online version may encounter errors while downloading due to rate limiting from Instagram's servers. If you see an error message containing "Please wait a few minutes before you try again.", this is caused by rate limiting. Please try again later or consider running it locally.
 
 ## Local Installation
 
