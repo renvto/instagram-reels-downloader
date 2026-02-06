@@ -8,12 +8,11 @@ import threading
 import requests
 
 app = Flask(__name__)
-
 DOWNLOAD_FOLDER = "/tmp/downloads"
 os.makedirs(DOWNLOAD_FOLDER, exist_ok=True)
 
 def resolve_instagram_url(url):
-    if "instagram.com/share/reel/" in url:
+    if "instagram.com/share/reel/" in url or "instagram.com/share/reels/" in url:
         try:
             response = requests.get(url, allow_redirects=True)
             final_url = response.url
@@ -28,7 +27,7 @@ def download_reel(url):
     if not real_url:
         return None, None, "Failed to resolve Instagram URL"
    
-    match = re.search(r'instagram.com/reel/([^/?]+)', real_url)
+    match = re.search(r'instagram.com/reels?/([^/?]+)', real_url)
     if not match:
         return None, None, "Invalid Instagram reel URL"
    
